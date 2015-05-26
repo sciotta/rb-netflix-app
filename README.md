@@ -1,6 +1,8 @@
 # rb-netflix-app [![Build Status](https://travis-ci.org/thiagog3/rb-netflix-app.svg?branch=master)](https://travis-ci.org/thiagog3/rb-netflix-app) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 A simple SPA AngularJS application consuming Netflix GitHub API account. Testing with Karma and Protractor.
 
+See a demo and functional page here: <http://thiagog3.github.io/rb-netflix-app>
+
 ## Getting Started
 
 #### 1. Setting Up environment
