@@ -1,0 +1,13 @@
+<div data-ng-controller="RepositoriesNavCtrl">
+	<div id="repositories-list">
+		<h2>projetos</h2>
+		<div class="row">
+			  <!-- @begin: repository name and description -->
+			  <ul scrollable="{suppressScrollX: true}">
+				<li data-ng-repeat="repo in repos | orderBy:'-stargazers_count'" data-ng-click="changeRepository(repo)" data-ng-class="{ selected: repo.selected}">
+				  <h4><a href="#/{{repo.name}}">{{repo.name}}</a></h4>
+				</li>
+			  </ul>
+		</div>
+	</div>
+</div>
