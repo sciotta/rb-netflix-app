@@ -9,7 +9,7 @@ Clone this repository and install nodeJS and some packages (NPM) globaly:
 
 ```
 npm install -g bower grunt-cli
-npm install -g protrector
+npm install -g protractor
 ```
 
 #### 2. Download node modules and bower components
