@@ -1,28 +1,28 @@
 <h3>{{repositoryName}}</h3>
 <hr/>
 <div class="col-group">
-	<div class="col-4">
-		<h4>stars {{actualRepo.stargazers_count}}</h4>
-	</div>
-	<div class="col-4">
-		<h4>forks {{actualRepo.forks_count}}</h4>
-	</div>
-	<div class="col-4">
-		<h4>watchers {{actualRepo.watchers_count}}</h4>
-	</div>
+    <div class="col-4">
+        <h4>stars {{actualRepo.stargazers_count}}</h4>
+    </div>
+    <div class="col-4">
+        <h4>forks {{actualRepo.forks_count}}</h4>
+    </div>
+    <div class="col-4">
+        <h4>watchers {{actualRepo.watchers_count}}</h4>
+    </div>
 </div>
-<div scrollable="{suppressScrollX: true}" id="commits-container">
-	<div data-ng-repeat="commit in commits" class="commit-panel">
-		<div class="float-left">
-			<img data-ng-src="{{commit.author.avatar_url}}" width="50" height="50"/>
-		</div>
-		<div class="float-left">
-			<div><strong>{{commit.commit.message}}</strong></div>
-			<div>@{{commit.author.login}}</div>
-		</div>
-		<div class="float-right">{{}}{{commit.commit.author.date | date:'dd/MM/yyyy HH:mm'}}</div>
-		<div class="clear-fix"></div>
-	</div>
-	
-	<button ladda="commitsLoading" data-ng-click="loadCommits()" data-ng-show="!allCommitsLoaded" id="load-commits-btn">{{commitButtonText}}</button>
+<div data-scrollable="{suppressScrollX: true}" id="commits-container">
+    <div data-ng-repeat="commit in commits" class="commit-panel">
+        <div class="float-left">
+            <img data-ng-src="{{commit.author.avatar_url}}" width="50" height="50"/>
+        </div>
+        <div class="float-left">
+            <div><strong>{{commit.commit.message}}</strong></div>
+            <div>@{{commit.author.login}}</div>
+        </div>
+        <div class="float-right">{{}}{{commit.commit.author.date| date:'dd/MM/yyyy HH:mm'}}</div>
+        <div class="clear-fix"></div>
+    </div>
+
+    <button ladda="commitsLoading" data-ng-click="loadCommits()" data-ng-show="!allCommitsLoaded" id="load-commits-btn">{{commitButtonText}}</button>
 </div>
